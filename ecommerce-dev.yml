@@ -1,5 +1,5 @@
 token:
-  secret: my_token_dev_#2
+  secret: my_token_native_dev
   expiration_time: 864000000
 
 gateway:

@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    # url: jdbc:h2:tcp://localhost/h2-data/testdb
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password: '{cipher}AYArRc8xY1/UtOnn32EWItl1D2XNEivjn0ZkMLzyLZM12+0skBU0IvKn2Wqx3vmM/SdqQYE2s/NPdoKBrVAMwWWKfbxI1eqSXtcHfdH1xrpLUuI3sS9EQh/+UHwx0r/MQZG0Uu3tg53AwKLgI7BQzFAaFO/hhv17SoQGjgNSxzTCEAJuzFGggdORyQxr3qyfPcfPRbuDU8QC2a79P1Y03uGVPWhyUpL/i4xfmXwzCVQigv2V5865ZGOSKPOf4LfhLMlTQQI417gil37YRxQyZ+J6EumZjz0DWdhHUCFUK/JmlemBHu+7IYT5nwAiU83jls9PPd0DMjZ9/cvmADBoAqYQ8nybw/oXy03NxiaYsvFLSPymPr6gKQyh+NjZYRTPeNJkI16cwyzDX7o5LF1W9o5KaS8oEnyO+AdZMr5I74C7CsFCPvqsZwgNBiJXWMWGo6FDCmMVuL2kS9HHJFRa8yk5I2+f2GIVQpfsvBqz6qerw8BVAU+7BNwJ5Lyft3u/ufAvtyPWO6JP5Dc2FSwx85hCGl5EaYVkXPHVdqj7hkuXVQ=='
+  h2:
+    console:
+      settings:
+        web-allow-others: true
+      path: /h2-console
+
+token:
+  secret: '{cipher}AYBi/VSmXysoqFdjoPqVn7Dintjv2mv13btdasPejsLalH6GP0flO4Q0unRjfsx64vTr7AmZ48GF1ZFnDZtXxRtoFBlaCvM4mJUQOyMxkgeMFgLrYvqnhR29pJCSmlcJAqm4IL4fhVnioJQjEu99WQyt0jOAB8iDOyTwLDNMv8TFP0OiJisKiY+WTWxSQs4Vm37pt9gcUvo8LTJXLw5fKACrJpuh0VWHz02StlHpztmsmOEtm1XQX4vUEfRUGFzzvFV8Da48D3i7EsHd/09/EW1eU8qXrqy6//5WsHsyjuM3/zhMvagLqkeCXW5CUPhhAGJMOvyecTsP/ca61z5J+pPp4kFjfSHsYBL9WuJq6a7uaD6R1RUfocLqbkEN8HH0K0iwLT9/uvgo9N6NdK/2cjI/7cPuLnny1immjRWoXARSRD2lFIYlWVDd80CgxuxSGTrVI2em1Q/Fzw2dOSUwz9/NI6wEb8+Cj0R99uQMoLyWTNsyIw9vy53FSo8taGrBWGQ2HPahShsHXFjWWvCMC89tfW8+ZiHf803pII9aOB84x4J1Zt89EpDnkoHDXFHiNaw='
+  expiration_time: 864000000
+
+gateway:
+  ip: 192.168.123.103
+
+order_service:
+    url: http://order-service/order-service/%s/orders
+    exception: 
+      orders_is_empty: User's orders are empty
